@@ -1,3 +1,3 @@
-![](./image/1.png)
+![112](../basic/image/1.PNG)
 
-xddd
+xdddsd
