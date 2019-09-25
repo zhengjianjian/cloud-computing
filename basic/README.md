@@ -1,3 +1,4 @@
-![112](../basic/image/1.PNG)
+![112](./image/1.PNG)
 
 xdddsd
+
