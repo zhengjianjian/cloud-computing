@@ -60,3 +60,11 @@
 
 ![14](../basic/image/14.PNG)
 
+（12）推送本地更新至远程服务器：
+
+![](../basic/image/15.PNG)
+
+### 本地安装VMware Workstation和Centos操作系统
+
+![](../basic/image/16.PNG)
+
