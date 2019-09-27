@@ -4,7 +4,7 @@
 
 （1）购买腾讯云服务器
 
-![1](./image/1.png)
+![1](../basic/image/1.png)
 
 (2)使用web shell登录
 
