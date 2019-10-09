@@ -38,3 +38,46 @@ sudo systemctl start mariadb
 
 sudo mysql_secure_installation
 
+设置相应的root访问密码以及相关的设置
+
+最后设置开机启动MariaDB:
+
+sudo systemctl enable mariadb.service
+
+![](../Website/image/5.PNG)
+
+### 3.安装PHP
+
+首先启动这两个仓库
+
+sudo yum install epel-release yum-utils
+
+sudo yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+
+接着启用PHP 7.2 Remi仓库：
+
+sudo yum-config-manager --enable remi-php72
+
+安装PHP以及php-mysql
+
+sudo yum install php php-mysql
+
+查看安装的php版本：
+
+php -v
+
+![](../Website/image/6.PNG)
+
+安装之后，重启Apache服务器以支持PHP:
+
+sudo systemctl restart httpd.service
+
+### 安装PHP模块
+
+如下命令可以查看可用模块：
+
+yum search php-
+
+部分结果如图所示：
+
+![](../Website/image/7.PNG)
