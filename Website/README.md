@@ -29,3 +29,12 @@ sudo yum install mariadb-server mariadb
 安装完成显示
 
 ![](../Website/image/4.PNG)
+
+安装好之后，启动mariadb:
+
+sudo systemctl start mariadb
+
+运行简单的安全脚本以移除潜在的安全风险，启动交互脚本：
+
+sudo mysql_secure_installation
+
