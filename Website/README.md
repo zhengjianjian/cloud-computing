@@ -187,3 +187,22 @@ nano wp-config.php
 
 ### (4)通过Web界面进一步配置WordPress
 
+经过上述的安装和配置，WordPress运行的相关组件已经就绪，接下来通过WordPress提供的Web页面进一步配置。输入你的IP地址或者域名：
+
+http://49.235.61.89/
+
+出现如下界面：
+
+![](../Website/image/16.PNG)
+
+设置网站的标题，用户名和密码以及电子邮件等，点击**Install WordPress**，弹出确认页面：
+
+![](../Website/image/17.PNG)
+
+点击**Log In**，弹出登录界面：
+
+![](../Website/image/18.PNG)
+
+输入用户名和密码之后，进入WordPress的控制面板：
+
+![](../Website/image/19.PNG)
