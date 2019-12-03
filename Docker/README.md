@@ -120,3 +120,117 @@ docker push 1448166956/centos7:a1
 
 ![](../Docker/image/12.PNG)
 
+### 三.编写Dockerfile
+
+1.编写Dockerfile安装Apache web服务器
+
+(1)在本地主机新建一个目录（本文为mydocker）存放Dockerfile文件，新建Dockerfile文件：
+
+ mkdir mydocker
+
+ cd mydocker
+
+ vim Dockerfile
+
+向Dockerfile文件中添加如下内容.
+
+![](../Docker/image/13.PNG)
+
+(2)生成Docker镜像
+
+docker build  -t centos:httpd .
+
+结果如下：
+
+![](../Docker/image/14.PNG)
+
+(3)启动容器实例
+
+首先，为刚才在Dockerfile中VOLUME创建挂载点。在本地主机下创建一个新目录（/data目录），用于挂载Apache Web的根目录/var/www/html，对应Dockerfile文件中定义的“VOLUME /var/www/html”。
+
+mkdir data
+
+随后，启动容器
+
+docker run -td -p 8888:80 -v /data:/var/www/html --name=web centos:httpd
+
+![](../Docker/image/15.PNG)
+
+（4）验证apache web服务器是否安装成功
+
+​    在/data目录创建index.html文件，由于刚才设定了卷的挂载，index.html将自动挂载到容器的/var/www/html目录，而这个目录是Apache Web的根目录。
+
+  cd data
+
+vim index.html
+
+添加如下内容：
+
+This is an apache httpd test. Build with dockerfile on CentOS 7.
+Data are on host but share with volumn /var/www/html on the Docker container.
+进入相关端口，得到结果：
+
+![](../Docker/image/16.PNG)
+
+2.编写Dockerfile安装php服务器
+
+(1)安装php服务器是在安装好的有apache web服务器的容器
+
+   cd mydocker
+
+   vim Dockerfile
+
+向Dockerfile文件中添加如下内容.
+
+![](../Docker/image/17.PNG)
+
+(2)生成Docker镜像
+
+docker build  -t centos:php .
+
+结果如下：
+
+![](../Docker/image/18.PNG)
+
+(3)启动容器实例
+
+首先，为刚才在Dockerfile中VOLUME创建挂载点。在本地主机下创建一个新目录（/data目录），用于挂载Apache Web的根目录/var/www/html，对应Dockerfile文件中定义的“VOLUME /var/www/html”。
+
+mkdir data
+
+随后，启动容器
+
+docker run -td -p 8889:80 -v /data:/var/www/html --name=php centos:php
+
+![](../Docker/image/19.PNG)
+
+（4）验证php服务器是否安装成功
+
+在/data目录下创建info.php,内容如下：
+
+<?php phpinfo(); ?>
+
+进入相关端口，查看结果
+
+![](../Docker/image/20.PNG)
+
+3.安装WordPress
+
+(1)安装wordpress是在安装好的有php服务器的容器
+
+ cd mydocker
+
+   vim Dockerfile
+
+向Dockerfile文件中添加如下内容.
+
+![](../Docker/image/21.PNG)
+
+(2)生成Docker镜像
+
+docker build  -t centos:wordpress1 .
+
+结果如下：
+
+![](../Docker/image/22.PNG)
+
