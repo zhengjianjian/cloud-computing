@@ -6,5 +6,5 @@
 
 ### 实验三 ：[Docker文件夹](https://github.com/zhengjianjian/cloud-computing/tree/master/Docker)
 
-### 实验三 ：[Ceph文件夹](https://github.com/zhengjianjian/cloud-computing/tree/master/Ceph)
+### 实验四 ：[Ceph文件夹](https://github.com/zhengjianjian/cloud-computing/tree/master/Ceph)
 
